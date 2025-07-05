@@ -1,4 +1,4 @@
-# borr_curriculum
+# Curricula Flutter App
 
 A new Flutter project.
 
