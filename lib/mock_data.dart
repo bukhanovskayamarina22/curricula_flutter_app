@@ -11,7 +11,6 @@ final course3 = CourseRepositoryModel(id: 3, name: 'course3', trackId: 1, link: 
 final course4 = CourseRepositoryModel(id: 4, name: 'course4', trackId: 2, link: 'http://example.com');
 final course5 = CourseRepositoryModel(id: 5, name: 'course5', trackId: 2, link: 'http://example.com');
 final course6 = CourseRepositoryModel(id: 6, name: 'course6', trackId: 2, link: 'http://example.com');
-final course7 = CourseRepositoryModel(id: 7, name: 'course7', trackId: 2, link: 'http://example.com');
 
 final TodoRepositoryModel todo1 = TodoRepositoryModel(id: 1, name: 'todo1', courseId: 1);
 final TodoRepositoryModel todo2 = TodoRepositoryModel(id: 2, name: 'todo2', courseId: 1);
