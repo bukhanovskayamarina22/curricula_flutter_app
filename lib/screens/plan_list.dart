@@ -1,4 +1,4 @@
-import 'package:borr_curriculum/screens/widgets/app_bottom_navigation_bar.dart';
+import 'package:curricula_flutter_app/screens/widgets/app_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 class MyStudyPlan extends StatelessWidget {

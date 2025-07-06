@@ -1,5 +1,5 @@
-import 'package:borr_curriculum/screens/widgets/app_bottom_navigation_bar.dart';
-import 'package:borr_curriculum/utils/date_time_formatter.dart';
+import 'package:curricula_flutter_app/screens/widgets/app_bottom_navigation_bar.dart';
+import 'package:curricula_flutter_app/utils/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {

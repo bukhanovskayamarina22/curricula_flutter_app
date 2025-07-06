@@ -1,6 +1,6 @@
-import 'package:borr_curriculum/screens/home_screen.dart';
-import 'package:borr_curriculum/screens/plan_list.dart';
-import 'package:borr_curriculum/utils/navigator_helper.dart';
+import 'package:curricula_flutter_app/screens/home_screen.dart';
+import 'package:curricula_flutter_app/screens/plan_list.dart';
+import 'package:curricula_flutter_app/utils/navigator_helper.dart';
 import 'package:flutter/material.dart';
 
 class AppBottomNavigationBar extends StatelessWidget {
