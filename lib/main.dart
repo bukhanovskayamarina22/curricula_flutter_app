@@ -1,3 +1,4 @@
+import 'package:curricula_flutter_app/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,80 +15,6 @@ class MyApp extends StatelessWidget {
       title: 'Study Todos',
       theme: ThemeData(colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue)),
       home: const MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key});
-
-  // TODO: move to app bar with localizaiton
-  final title = 'Home Page';
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  late DateTime today;
-  //TODO: replace with parameter from shared preferences
-  late DateTime plannedEndDate;
-
-  @override
-  void initState() {
-    final now = DateTime.now();
-    today = DateTime(now.year, now.month, now.day);
-    plannedEndDate = DateTime(2028, 4, 26);
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-    final textTheme = Theme.of(context).textTheme;
-    final titleMedium = textTheme.titleMedium;
-    var todayText = 'Today is: ${DateTimeFormatter.dateTimeToDate(today)}';
-    var dueDateText = 'Your due date is set to: ${DateTimeFormatter.dateTimeToDate(plannedEndDate)}';
-    var daysLeftText = 'Days left: ${plannedEndDate.difference(today).inDays}';
-    var titleLargePrimary = textTheme.titleLarge?.copyWith(color: colorScheme.primary);
-    return Scaffold(
-      appBar: AppBar(backgroundColor: Theme.of(context).colorScheme.inversePrimary, title: Text(widget.title)),
-      bottomNavigationBar: BottomNavigationBar(
-        items: [
-          BottomNavigationBarItem(
-            label: 'Home',
-            icon: IconButton(
-              onPressed: () => NavigatorHelper.navigateToPage(context: context, page: MyHomePage()),
-              icon: Icon(Icons.home),
-            ),
-          ),
-          BottomNavigationBarItem(
-            label: 'Plan',
-            icon: IconButton(
-              onPressed: () => NavigatorHelper.navigateToPage(context: context, page: MyStudyPlan()),
-              icon: Icon(Icons.list),
-            ),
-          ),
-        ],
-      ),
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            //TODO: change to Row layout, table-like with different fonts and text colors for the title and the date
-            Text(todayText, style: titleMedium),
-            SizedBox(height: 8),
-            Text(dueDateText, style: titleMedium),
-            SizedBox(height: 8),
-            Text(daysLeftText, style: titleMedium),
-            SizedBox(height: 8),
-            Divider(),
-            SizedBox(height: 8),
-            Text('Your plan for today:', style: titleLargePrimary),
-          ],
-        ),
-      ),
     );
   }
 }

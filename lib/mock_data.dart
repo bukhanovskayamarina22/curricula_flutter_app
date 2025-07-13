@@ -48,7 +48,7 @@ final TodoRepositoryModel todo28 = TodoRepositoryModel(id: 28, name: 'todo28', c
 
 final List<TrackRepositoryModel> tracks = [track1, track2];
 
-final List<CourseRepositoryModel> courses = [course1, course2, course3, course4, course5, course6, course7];
+final List<CourseRepositoryModel> courses = [course1, course2, course3, course4, course5, course6];
 
 final List<TodoRepositoryModel> allTodos = [
   todo1,

@@ -38,6 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(todayText, style: titleMedium),
@@ -49,6 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Divider(),
             SizedBox(height: 8),
             Text('Your plan for today:', style: titleLargePrimary),
+            SizedBox(height: 8),
           ],
         ),
       ),
