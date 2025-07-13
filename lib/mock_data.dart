@@ -1,6 +1,6 @@
-import 'package:curricula_flutter_app/service/models/course_repository_model.dart';
-import 'package:curricula_flutter_app/service/models/todo_repository_model.dart';
-import 'package:curricula_flutter_app/service/models/track_repository_model.dart';
+import 'package:curricula_flutter_app/service/models/course_repository_model.dart' show CourseRepositoryModel;
+import 'package:curricula_flutter_app/service/models/todo_repository_model.dart' show TodoRepositoryModel;
+import 'package:curricula_flutter_app/service/models/track_repository_model.dart' show TrackRepositoryModel;
 
 final track1 = TrackRepositoryModel(id: 1, name: 'track 1', link: 'http://example.com');
 final track2 = TrackRepositoryModel(id: 2, name: 'track 2', link: null);
