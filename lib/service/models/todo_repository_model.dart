@@ -11,6 +11,7 @@ abstract class TodoRepositoryModel with _$TodoRepositoryModel {
     int? courseId,
     String? link,
     String? description,
+    int? parentId,
   }) = _TodoRepositoryModel;
 
   factory TodoRepositoryModel.fromJson(Map<String, dynamic> json) => _$TodoRepositoryModelFromJson(json);

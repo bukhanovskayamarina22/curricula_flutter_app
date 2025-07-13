@@ -41,7 +41,6 @@ class DatabaseRepository {
             CREATE TABLE courses (
               id INTEGER PRIMARY KEY,
               name TEXT NOT NULL,
-              trackId INTEGER,
               link TEXT NOT NULL UNIQUE,
               description TEXT,
               FOREIGN KEY (trackId) REFERENCES tracks(id)
@@ -55,9 +54,22 @@ class DatabaseRepository {
               courseId INTEGER,
               link TEXT,
               description TEXT,
-              FOREIGN KEY (courseId) REFERENCES courses(id)
+              parentId INTEGER,
+              FOREIGN KEY (courseId) REFERENCES courses(id),
+              FOREIGN KEY (parentId) REFERENCES todos(id),
+              CHECK (parentId IS NULL OR parentId != id)
             )
           ''');
+
+          await txn.execute('''
+            CREATE TABLE course_tracks (
+              courseId INTEGER,
+              trackId INTEGER,
+              PRIMARY KEY (courseId, trackId),
+              FOREIGN KEY (courseId) REFERENCES courses(id)
+              FOREIGN KEY (trackId) REFERENCES tracks(id)
+            )
+            ''');
         });
       },
     );

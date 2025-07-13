@@ -13,6 +13,7 @@ _TodoRepositoryModel _$TodoRepositoryModelFromJson(Map<String, dynamic> json) =>
       courseId: (json['courseId'] as num?)?.toInt(),
       link: json['link'] as String?,
       description: json['description'] as String?,
+      parentId: (json['parentId'] as num?)?.toInt(),
     );
 
 Map<String, dynamic> _$TodoRepositoryModelToJson(
@@ -23,4 +24,5 @@ Map<String, dynamic> _$TodoRepositoryModelToJson(
   'courseId': instance.courseId,
   'link': instance.link,
   'description': instance.description,
+  'parentId': instance.parentId,
 };
